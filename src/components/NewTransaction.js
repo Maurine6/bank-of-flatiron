@@ -5,7 +5,7 @@ function AddTransactionform({onAddTransaction}){
     const [date, setDate]=useState("");
     const [description,setDescription]=useState('');
     const [category,setCategory]=useState('');
-    const [amount,seAmount]=useState('');
+    const [amount,setAmount]=useState('');
 
     // handle form submission
     const handleSubmit=(e)=>{
@@ -15,7 +15,7 @@ function AddTransactionform({onAddTransaction}){
             setDate('');
             setDescription('');
             setCategory('');
-            seAmount('');
+            setAmount('');
         };
     };
     return(
