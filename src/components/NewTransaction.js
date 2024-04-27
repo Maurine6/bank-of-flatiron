@@ -20,24 +20,25 @@ function AddTransactionform({onAddTransaction}){
     };
     return(
         <div>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Date:</label>
-                    <input type="text" value={date} onChange={(e)=>setDate(e.target.value)}/>
+            <form class="row" onSubmit={handleSubmit}>
+                <div class="col-auto">
+                <label class="col-form-label">Date:</label>
+                </div>
+                <div class="col">
+                    <input type="text"  class="form-control form-control-sm" value={date} onChange={(e)=>setDate(e.target.value)}/>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Description" aria-label="Description"/>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Category" aria-label="Category"/>
+                 </div>               
+                <div class="col">
+                    <input type="text" class="form-control form-control-sm" placeholder="Amount"  aria-label="Amount" value={amount} onChange={(e)=>setAmount(e.target.value)}/>
                 </div>
                 <div>
-                    <label>Description:</label>
-                    <input type="text" value={description} onChange={(e)=>setDescription(e.target.value)}/>
-                </div>
-                <div>
-                    <label>Category:</label>
-                    <input type="text" value={category} onChange={(e)=>setCategory(e.target.value)}/>
-                </div>
-                <div>
-                    <label>Amount:</label>
-                    <input type="text" value={amount} onChange={(e)=>setAmount(e.target.value)}/>
-                </div>
                 <button type="submit">Add New Transaction</button>
+                </div>
             </form>
         </div>
     )

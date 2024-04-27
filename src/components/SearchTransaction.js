@@ -16,8 +16,8 @@ function SearchTransaction({transactions}){
     setSearchResults(results);
     }
     return(
-        <div>
-          <input placeholder="Search Transaction" type="text" value={searchTerm} onChange={handleChange} onTouchStart={handleSearch}/>  
+        <div class="input-group mb-3">
+          <input  class="form-control" placeholder="Search Transaction" type="text" value={searchTerm} onChange={handleChange} onTouchStart={handleSearch}/>  
         </div>
     )
 

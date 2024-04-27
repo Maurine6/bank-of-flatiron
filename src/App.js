@@ -1,10 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-import initialTransactions from './data/Transactions,js';
 import { useState } from 'react';
 import SearchTransaction from './components/SearchTransaction';
-
 import AddTransactionform from './components/NewTransaction';
+import BankTransactionList from './components/BankTransactionList';
+
+import initialTransactions from './data/Transactions';
+console.log(initialTransactions)
+
+
+
 
 function App() {
   // state managing Transaction lists.
@@ -18,7 +22,10 @@ function App() {
       {/** title of the page */}
       <h1>The Royal Bank of Flatiron</h1>
       <SearchTransaction transactions={transactions}/>
-      <AddTransactionform onAddTransaction={addTransaction}/>
+      <AddTransactionform onAddTransaction={addTransaction}
+      />
+      <br/>
+      <BankTransactionList transactions={transactions}/>
       
 
     </div>
