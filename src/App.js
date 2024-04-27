@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import initialTransactions from './data/Transactions,js';
+import { useState } from 'react';
+console.log(initialTransactions);
 
 function App() {
+  // state managing Transaction lists.
+  const [transactions,setTransactions]=useState(initialTransactions);
+  // function  to add a new transaction.
+  const addTransaction=(newTransaction)=>{
+    setTransactions([...transactions,newTransaction]);
+  } 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/** title of the page */}
+      <h1>The Royal Bank of Flatiron</h1>
+
     </div>
   );
 }
