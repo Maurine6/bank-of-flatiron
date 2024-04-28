@@ -15,5 +15,22 @@ AS a user, you can:
 2. Add a New Transaction.
 - When the page loads, you can see a form with the various fields to be filled with new transaction details and an add new transaction button to submit the your input to the form.
 
-3. 
+3. Search a Transaction.
+- When the page loads, you can see an iput field which you'll input a search term preferably a description of the transaction. The desired results will be filtered from the given table of transactions.
+
+
+## TECHNOLOGY USED:
+1. HTML.
+2. CSS.
+3. REACT.
+
+## Support and contact details:
+https://github.com/Maurine6/
+
+## LICENSE:
+The content of this site is licensed under the MIT license
+Copyright (c) 2018.
+
+
+
 
