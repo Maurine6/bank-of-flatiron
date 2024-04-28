@@ -8,8 +8,6 @@ import initialTransactions from './data/Transactions';
 console.log(initialTransactions)
 
 
-
-
 function App() {
   // state managing Transaction lists.
   const [transactions,setTransactions]=useState(initialTransactions);
@@ -17,11 +15,17 @@ function App() {
   const addTransaction=(newTransaction)=>{
     setTransactions([...transactions,newTransaction]);
   } 
+
+  function handleOnSearch(searchTerm){
+    setTransactions(transactions=>transactions.filter((transaction)=>transaction.description.toLocaleLowerCase().includes(searchTerm.toLowerCase())
+    ))
+  
+  }
   return (
     <div className="App">
       {/** title of the page */}
       <h1>The Royal Bank of Flatiron</h1>
-      <SearchTransaction transactions={transactions}/>
+      <SearchTransaction onSearch={handleOnSearch}/>
       <AddTransactionform onAddTransaction={addTransaction}
       />
       <br/>
