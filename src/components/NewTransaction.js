@@ -20,6 +20,7 @@ function AddTransactionform({onAddTransaction}){
         };
     };
     return(
+        // form to add a new transaction.
         <div>
             <form  onSubmit={handleSubmit}>
                 <div class="row">

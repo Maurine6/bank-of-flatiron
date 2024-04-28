@@ -2,6 +2,7 @@ import React from "react";
 
 function BankTransactionList({transactions}){
     return(
+        // transaction list table
         <div>
             <table class="table table-striped">
                 <th scope="col">Date</th>

@@ -15,7 +15,7 @@ function App() {
   const addTransaction=(newTransaction)=>{
     setTransactions([...transactions,newTransaction]);
   } 
-
+   // function to filter transactions onsearch.
   function handleOnSearch(searchTerm){
     setTransactions(transactions=>transactions.filter((transaction)=>transaction.description.toLocaleLowerCase().includes(searchTerm.toLowerCase())
     ))
@@ -25,10 +25,13 @@ function App() {
     <div className="App">
       {/** title of the page */}
       <h1>The Royal Bank of Flatiron</h1>
+      {/**  displayin search transaction component */}
       <SearchTransaction onSearch={handleOnSearch}/>
+      {/**  displaying add transaction component */}
       <AddTransactionform onAddTransaction={addTransaction}
       />
       <br/>
+      {/** displaying transaction table */}
       <BankTransactionList transactions={transactions}/>
       
 

@@ -1,3 +1,5 @@
+
+// an array of transaction data.
 const initialTransactions= [
     {date:"2019-12-01", description:"Paycheque from bob's Burgers", category:"Income",amount:"1000"},
     {date:"2019-12-01", description:"South by SouthWest quinoes bowl at Fresh & co", category:"Food",amount:"-10.55"},
